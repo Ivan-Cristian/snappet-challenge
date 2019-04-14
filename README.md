@@ -21,6 +21,6 @@ The project is structured using a Page Object pattern. Locators for elements are
 
 The test is located in the `./cypress/integration/` folder, which contains a high level overview of what the test does - it is human readable and requires no knowledge of programming to interpret.
 
-The test code used in the test is located in the `./cypress/support/commands` folder. Each top level test command is added to Cypress (f.ex. `cy.activateSubjectWithName`), while intermediary methods (f.ex. launching of a modal) are regular javascript functions.
+The test code used in the test is located in the `./cypress/support/commands` folder. Each top level test command is a regular javascript function over some cypress automation code, with programmatic documentation and code reference support.
 
 Both locators and commands are indexed and exported whole-sale for ease of use.
