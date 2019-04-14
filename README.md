@@ -14,4 +14,4 @@ from root folder of repo, run `npm install`
 ## Execution instructions
 Comes with 2 flavors:
 1. Open Cypress to manually run tests and visually inspect results: `npm run cypress:open`
-2. Run Cypress test headless: `npm run cypress:run`
+2. Run Cypress test headlessly, will output a video after running: `npm run cypress:run`
