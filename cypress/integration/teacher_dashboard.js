@@ -1,5 +1,5 @@
-import * as locators from '../support/locators/index';
 import * as user from '../fixtures/user';
+import * as commands from '../support/commands/index';
 
 function randomNumber() {
   return (Math.floor(Math.random() * 10)).toString()
@@ -12,12 +12,12 @@ describe('Teacher Dashboard for Snappet', function () {
     before(function () {
       cy.clearCookies()
       cy.visit('/')
-      cy.loginThroughUI(user.testUser.username, user.testUser.password)
+      commands.loginThroughUI(user.testUser.username, user.testUser.password)
     })
     it('should allow adding, editing and deleting of a new subject', () => {
-      cy.activateSubjectWithName('Spelling', 5, subjectTitle)
-      cy.assertActivatedSubject(subjectTitle)
-      cy.editTitleForSubject(subjectTitle, editedTitle)
-      cy.removeSubjectByTitle(editedTitle)
+      commands.activateSubjectWithName('Spelling', 5, subjectTitle)
+      commands.assertActivatedSubjectPresent(subjectTitle)
+      commands.editTitleForSubject(subjectTitle, editedTitle)
+      commands.removeSubjectByTitle(editedTitle)
     })
 })
