@@ -11,12 +11,12 @@ Type `brew install node`.
 3. Install dependencies:
 from root folder of repo, run `npm install`
 
-## Execution instructions
+### Execution instructions
 Comes with 2 flavors:
 1. Open Cypress to manually run tests and visually inspect results: `npm run cypress:open`
 2. Run Cypress test headlessly, will output a video after running: `npm run cypress:run`
 
-### Project structure:
+## Project structure:
 The project is structured using a Page Object pattern. Locators for elements are present in the `./cypress/support/locators` folder.
 
 The test is located in the `./cypress/integration/` folder, which contains a high level overview of what the test does - it is human readable and requires no knowledge of programming to interpret.
