@@ -9,10 +9,10 @@ export const openSubjectModal = () => {
 /**
  * all have default values, so function can be called with no params
 * @param {string} subjectName the class module for which the subject is activated
-* @param {number, string} level group level slider option
+* @param {number} level group level slider option
 * @param {string} name name of new subject to be activated
 */
-export function activateSubjectWithName(subjectName ='', level = 5, name = "Assignment Cristian") {
+export function activateSubjectWithName(subjectName = 'Spelling', level = 5, name = "Assignment Cristian") {
   openSubjectModal()
   modalOperations.selectSubjectAndContinue(subjectName)
   modalOperations.selectGroupLevelAndContinue(level)
