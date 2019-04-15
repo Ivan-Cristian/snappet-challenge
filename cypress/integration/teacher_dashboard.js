@@ -21,7 +21,7 @@ describe('Teacher Dashboard for Snappet', () => {
   it('should allow editiong of newly added subject', () => {
     commands.editTitleForSubject(subjectTitle, editedTitle)
     commands.assertSubjectNotPresentOnDashboard(subjectTitle)
-    commands.assertActivatedSubjectPresent(subjectTitle)
+    commands.assertActivatedSubjectPresent(editedTitle)
   })
   it('should allow deletion of edited subject', () => {
     commands.removeSubjectByTitle(editedTitle)
