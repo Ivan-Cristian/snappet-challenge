@@ -62,3 +62,13 @@ export function removeSubjectByTitle(title) {
     .and('have.text', 'The subject has been deactivated.')
   cy.get(locators.toast.successToast).should('not.be.visible')
 }
+
+/**
+ * 
+ * @param {string} title the title of the subject you would like to verify is not present
+ */
+export function assertSubjectNotPresentOnDashboard(title) {
+  cy.get(locators.dashboard.subjectCard.body).each(cardBody=>{
+    cy.wrap(cardBody).find('strong').should('not.have.text', title)
+  })
+}

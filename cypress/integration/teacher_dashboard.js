@@ -19,5 +19,7 @@ describe('Teacher Dashboard for Snappet', function () {
       commands.assertActivatedSubjectPresent(subjectTitle)
       commands.editTitleForSubject(subjectTitle, editedTitle)
       commands.removeSubjectByTitle(editedTitle)
+      commands.assertSubjectNotPresentOnDashboard(subjectTitle)
+      commands.assertSubjectNotPresentOnDashboard(editedTitle)
     })
 })
