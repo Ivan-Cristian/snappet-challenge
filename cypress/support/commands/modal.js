@@ -33,7 +33,7 @@ export const selectGroupForSubject = (group = 0) => {
  * @param {string} name title of the subject to be added
  */
 export const enterNameForNewSubject = (name) => {
-  cy.get(locators.modal.subjectsModal.subjectNameField).clear({force: true}).type(name)
+  cy.get(locators.modal.subjectsModal.subjectNameField).clear({ force: true }).type(name)
 }
 
 /**

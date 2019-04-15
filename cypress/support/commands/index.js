@@ -1,14 +1,14 @@
-import {assertSubjectNotPresentOnDashboard, activateSubjectWithName, editTitleForSubject, removeSubjectByTitle, assertActivatedSubjectPresent} from './dashboard';
-import {loginThroughUI, loginThroughPOST} from './login';
+import { assertSubjectNotPresentOnDashboard, activateSubjectWithName, editTitleForSubject, removeSubjectByTitle, assertActivatedSubjectPresent } from './dashboard';
+import { loginThroughUI, loginThroughPOST } from './login';
 import modal from './modal';
 
 export {
-  activateSubjectWithName, 
+  activateSubjectWithName,
   assertActivatedSubjectPresent,
   assertSubjectNotPresentOnDashboard,
-  editTitleForSubject, 
+  editTitleForSubject,
   loginThroughUI,
-  loginThroughPOST, 
+  loginThroughPOST,
   modal,
   removeSubjectByTitle
 }

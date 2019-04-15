@@ -40,9 +40,9 @@ Cypress.Commands.add("restoreLocalStorage", () => {
   });
 });
 
-beforeEach(()=>{
+beforeEach(() => {
   cy.restoreLocalStorage();
 })
-afterEach(()=>{
+afterEach(() => {
   cy.saveLocalStorage();
 })

@@ -30,7 +30,7 @@ export function loginThroughPOST(user, pass) {
       "Accept": "*/*",
       "Content-Type": "application/json; charset=utf-8"
     }
-  }).then(()=>{
+  }).then(() => {
     cy.visit('/')
   });
 }

@@ -38,13 +38,13 @@ export function assertActivatedSubjectPresent(name) {
 export function editTitleForSubject(prevTitle, newTitle) {
   cy.get(locators.dashboard.subjectCard.body).contains(prevTitle).eq(0)
     .parents(locators.dashboard.subjectCard.body)
-    .find(locators.dashboard.subjectCard.editSubjectButton, {timeout: 10000}).click()
+    .find(locators.dashboard.subjectCard.editSubjectButton, { timeout: 10000 }).click()
   cy.get(locators.dashboard.subjectCard.editSubjectTitleField).click()
-  cy.get(locators.dashboard.subjectCard.editSubjectTitleField).clear({force: true}).type(newTitle)
+  cy.get(locators.dashboard.subjectCard.editSubjectTitleField).clear({ force: true }).type(newTitle)
   cy.get(locators.dashboard.subjectCard.editSubjectLessonPlanField).should('contain', 'My Lesson Plan')
   cy.get(locators.dashboard.subjectCard.editSubjectSaveButton).click()
   cy.get(locators.toast.successToast).should('be.visible')
-  .and('have.text', 'Subject changes have been saved')
+    .and('have.text', 'Subject changes have been saved')
   cy.get(locators.toast.successToast).should('not.be.visible')
 }
 /**
@@ -53,8 +53,8 @@ export function editTitleForSubject(prevTitle, newTitle) {
  */
 export function removeSubjectByTitle(title) {
   cy.get(locators.dashboard.subjectCard.body).contains(title).eq(0)
-    .parents(locators.dashboard.subjectCard.body)  
-    .find(locators.dashboard.subjectCard.editSubjectButton, {timeout: 10000}).click()
+    .parents(locators.dashboard.subjectCard.body)
+    .find(locators.dashboard.subjectCard.editSubjectButton, { timeout: 10000 }).click()
   cy.get(locators.dashboard.subjectCard.editSubjectDeleteButton).click()
   cy.get(locators.modal.removeSubjectModal.removeButton).should('be.visible')
   cy.get(locators.modal.removeSubjectModal.removeButton).click()
@@ -68,7 +68,7 @@ export function removeSubjectByTitle(title) {
  * @param {string} title the title of the subject you would like to verify is not present
  */
 export function assertSubjectNotPresentOnDashboard(title) {
-  cy.get(locators.dashboard.subjectCard.body).each(cardBody=>{
+  cy.get(locators.dashboard.subjectCard.body).each(cardBody => {
     cy.wrap(cardBody).find('strong').should('not.have.text', title)
   })
 }
