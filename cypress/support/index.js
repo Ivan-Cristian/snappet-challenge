@@ -21,5 +21,5 @@ import '../support/commands/index'
 // require('./commands')
 
 Cypress.Cookies.defaults({
-  whitelist: ['.SnappetNewDB2016v1', '_ga', '_gid', '_gat', 'ASP.NET_SessionId', 'AWSELB', 'subjectFilterState_131575']
+  whitelist: /Snappet/
 })

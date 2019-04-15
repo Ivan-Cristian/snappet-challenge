@@ -2,13 +2,22 @@
 
 Simple test case that adds a new subject, edits the title and subsequently deletes it.
 
+## Requirements:
+Node: https://nodejs.org/en/
+Homebrew: https://brew.sh/
+npm: https://www.npmjs.com/
+Cypress: https://www.cypress.io/
+
 ## Installation instructions:
-1. Install node and npm:
+1. Install brew:
+`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+2. Install node and npm:  
 Open the Terminal app and type `brew update`. This updates Homebrew with a list of the latest version of Node.
 Type `brew install node`.
-2. Pull this code locally:
+
+3. Pull this code locally:
 `git clone git@github.com:Ivan-Cristian/snappet-challenge.git`
-3. Install dependencies:
+4. Install dependencies:
 from root folder of repo, run `npm install`
 
 ### Execution instructions
